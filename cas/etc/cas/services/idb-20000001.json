@@ -1,0 +1,8 @@
+{
+  "@class" : "org.apereo.cas.support.saml.services.SamlRegisteredService",
+  "serviceId" : "https://idbroker.webex.com.*",
+  "name" : "IdBroker",
+  "id" : 20000001,
+  "evaluationOrder" : 10,
+  "metadataLocation" : "https://sso.idp.carehybrid.com:8443/idb-meta-test-org1.xml"
+}

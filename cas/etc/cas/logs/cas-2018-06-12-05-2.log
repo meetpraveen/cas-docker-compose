@@ -1,0 +1,3 @@
+[32m2018-06-12 05:14:25,981 INFO [org.apereo.cas.configuration.config.CasCoreBootstrapStandaloneConfiguration] - <Configuration files found at [/etc/cas/config] are [[/etc/cas/config/application.yml, /etc/cas/config/cas.properties]]>[m
+[32m2018-06-12 05:14:26,019 INFO [org.apereo.cas.configuration.config.CasCoreBootstrapStandaloneConfiguration] - <Found and loaded [13] setting(s) from [/etc/cas/config]>[m
+[32m2018-06-12 05:14:26,020 INFO [org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration] - <Located property source: PropertiesPropertySource {name='standaloneCasConfigService'}>[m
