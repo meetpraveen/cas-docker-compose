@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  tomcat:
+    container_name: tomcat
+    image: cloudesire/tomcat:8-jre8
+    restart: always
+    ports:
+      - "8000:8000"
+      - "8443:8443"
+    environment:
+      - CATALINA_OPTS=-Xms512M -Xmx1024M -XX:MaxPermSize=512m
+      - TOMCAT_PASS=C1sco123=
+    volumes:
+      - ${ROOT}/tomcat/webapps:/tomcat/webapps
+      - ${ROOT}/tomcat/conf:/tomcat/conf
+      - ${ROOT}/tomcat/certs:/tomcat/certs
+      - ${ROOT}/cas/etc/cas:/etc/cas
+    networks:
+      - web
+  maven:
+    container_name: maven
+    image: maven:3.5-jdk-9
+    restart: always
+    volumes:
+      - ${ROOT}/tomcat/webapps:/tomcat/webapps
+      - ${ROOT}/cas/etc/cas:/etc/cas
+      - ${ROOT}/cas/git:/cas/git
+    networks:
+      - web
+    command: tail -F anything
+networks:
+  web:
+    external: true
