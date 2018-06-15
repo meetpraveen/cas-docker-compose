@@ -1,4 +1,4 @@
-# Setup a CAS server as idP with a dev environment
+# Setup CAS server as idP with a dev environment
 
 The repo intends to make life easier for setting up CAS authentication server primarily as a idP along with an 
 integrated dev environment to try out more customisations and integrations
@@ -6,7 +6,7 @@ integrated dev environment to try out more customisations and integrations
 The compose declares two containers
 
 1. tomcat - servlet container to host cas (and cas-management) wars
-2. maven - a dev environment with java, clone the relevant [cas-overlay](!https://github.com/apereo/cas-overlay-template)
+2. maven - a dev environment with java, clone the relevant [cas-overlay](https://github.com/apereo/cas-overlay-template)
 
 The volumes are laid out such that `tomcat/webapps` and `/etc/cas/config` are mapped to the host and both the containers
 
