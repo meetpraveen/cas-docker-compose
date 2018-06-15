@@ -45,6 +45,7 @@ $> ./build.sh package
 $> cp target/cas.war /tomcat/webapps
 ```
 8. Now you can create the service registry using json file in the format described below
+`$> vim /opt/cas/etc/cas/services/idbroker-40000003.json`
 ```json
 {
   "@class" : "org.apereo.cas.support.saml.services.SamlRegisteredService",
